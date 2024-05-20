@@ -1,32 +1,47 @@
 {
-  "latex-workshop.latex.outDir": "../",
+  "latex-workshop.latex.outDir": "../../",
   "latex-workshop.latex.tools": [
-      {
-          "name": "latexmk",
-          "command": "latexmk",
-          "args": [
-              "-pdf",
-              "-outdir=../",
-              "%DOC%"
-          ]
-      },
-      {
-          "name": "latexmk-clean",
-          "command": "latexmk",
-          "args": [
-              "-c",
-              "-outdir=../",
-              "%DOC%"
-          ]
-      }
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-outdir=../../",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk-clean",
+      "command": "latexmk",
+      "args": [
+        "-c",
+        "-outdir=../../",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk-clean-secondary",
+      "command": "latexmk",
+      "args": [
+        "-c",
+        "-outdir=../../",
+        "secondary.tex"
+      ]
+    }
   ],
   "latex-workshop.latex.recipes": [
-      {
-          "name": "latexmk with clean",
-          "tools": [
-              "latexmk",
-              "latexmk-clean"
-          ]
-      }
+    {
+      "name": "latexmk with clean",
+      "tools": [
+        "latexmk",
+        "latexmk-clean"
+      ]
+    },
+    {
+      "name": "latexmk clean secondary",
+      "tools": [
+        "latexmk-clean-secondary"
+      ]
+    }
   ]
 }
